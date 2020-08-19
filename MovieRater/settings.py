@@ -83,11 +83,11 @@ DATABASES = {
     }
 }
 
-# To restrict users with login credentials only
+# To restrict users with login credentials only to be able to access data
 REST_FRAMEWORK = {
-    'DEFAULT_PERMISSION_CLASSES': {
-        'rest_framework_permissions.IsAuthenticated',
-    }
+    'DEFAULT_PERMISSION_CLASSES': (
+        'rest_framework.permissions.IsAuthenticated',
+    )
 }
 
 # Password validation
